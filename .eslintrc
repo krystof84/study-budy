@@ -6,7 +6,8 @@
       "error",
       {
         "singleQuote": true,
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "printWidth": 120
       }
     ],
     "import/first": 0
