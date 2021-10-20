@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { ReactComponent as DeleteIcon } from 'assets/icons/delete-icon.svg';
+import Button from '../../atoms/Button/Button';
 
 const Wrapper = styled.li`
   display: flex;
@@ -17,23 +17,6 @@ const Wrapper = styled.li`
   }
 `;
 
-const StyledButton = styled.button`
-  width: 40px;
-  height: 40px;
-  background-color: #c0c7d6;
-  border-radius: 50px;
-  border: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
 const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
   <Wrapper>
     <div>{average}</div>
@@ -41,9 +24,7 @@ const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
       <p>{name}</p>
       <p>{attendance}</p>
     </div>
-    <StyledButton>
-      <DeleteIcon />
-    </StyledButton>
+    <Button />
   </Wrapper>
 );
 
