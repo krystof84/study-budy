@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+  cursor: pointer;
 
   svg {
     width: 100%;
