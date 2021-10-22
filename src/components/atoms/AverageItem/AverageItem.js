@@ -8,13 +8,13 @@ const AverageItem = (props) => {
 
     switch (true) {
       case average < 2:
-        averageColor = '#CB8581';
+        averageColor = ({ theme }) => theme.colors.error;
         break;
       case average < 3:
-        averageColor = '#E1D888';
+        averageColor = ({ theme }) => theme.colors.warning;
         break;
       default:
-        averageColor = '#8FCB81';
+        averageColor = ({ theme }) => theme.colors.success;
     }
 
     return averageColor;
