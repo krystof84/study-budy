@@ -17,7 +17,7 @@ const mockAPI = (success) => {
 };
 
 const UsersList = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState(usersData);
   const [isLoading, setLoadingState] = useState([]);
 
   const deleteUser = (name) => {
@@ -29,9 +29,14 @@ const UsersList = () => {
     <Wrapper>
       {/*<h1>{this.state.isLoading ? 'Loading' : 'Users list'}</h1>*/}
       <StyledList>
-        {/*        {this.state.users.map((userData, i) => (
-          <UsersListItem deleteUser={this.deleteUser} index={i} key={userData.name} userData={userData} />
-        ))}*/}
+        {users.map((userData, i) => (
+          <UsersListItem
+            deleteUser={deleteUser}
+            index={i}
+            key={userData.name}
+            userData={userData}
+          />
+        ))}
       </StyledList>
     </Wrapper>
   );
