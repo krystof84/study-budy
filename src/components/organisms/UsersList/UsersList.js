@@ -17,8 +17,18 @@ const mockAPI = (success) => {
 };
 
 const UsersList = () => {
-  const [users, setUsers] = useState(usersData);
+  const [users, setUsers] = useState([]);
   const [isLoading, setLoadingState] = useState([]);
+
+  useEffect(() => {
+    setLoadingState(true);
+    mockAPI()
+      .then((data) => {
+        setLoadingState(false);
+        setUsers(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const deleteUser = (name) => {
     const filteredUsers = users.filter((user) => user.name !== name);
@@ -27,7 +37,7 @@ const UsersList = () => {
 
   return (
     <Wrapper>
-      {/*<h1>{this.state.isLoading ? 'Loading' : 'Users list'}</h1>*/}
+      <h1>{isLoading ? 'Loading' : 'Users list'}</h1>
       <StyledList>
         {users.map((userData, i) => (
           <UsersListItem
@@ -40,39 +50,6 @@ const UsersList = () => {
       </StyledList>
     </Wrapper>
   );
-
-  /*  mockAPI()
-    .then(
-      data => {
-        this.setState({ isLoading: false })
-        this.setState({ users: data })
-      }
-    )
-    .catch(err => console.log(err));*/
 };
-
-/*class UsersList2 extends React.Component {
-
-  state = {
-    users: [],
-    isLoading: false,
-  };
-
-  componentDidMount() {
-    this.setState({ isLoading: true });
-
-  }
-
-  componentDidUpdate(_, prevState) {
-    if(prevState.isLoading !== this.state.isLoading) {
-      console.log('Loading state has changed');
-    }
-  }
-
-
-
-
-
-}*/
 
 export default UsersList;
