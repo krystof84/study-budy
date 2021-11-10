@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import UsersListItem from 'components/molecules/UsersListItem/UsersListItem';
-import { Wrapper } from './UserList.styles';
-import { StyledList } from './UserList.styles';
-import FormField from 'components/molecules/FormField/FormField';
-import { Button } from 'components/atoms/Button/Button';
+import { StyledList, StyledTitle } from './UserList.styles';
+import { ViewTemplate as Wrapper } from 'components/templates/ViewTemplate/ViewTemplate.styles';
 
 const UsersList = ({ users, deleteUser }) => {
   return (
     <>
       <Wrapper>
-        <h1>Users List</h1>
+        <StyledTitle>Users List</StyledTitle>
         <StyledList>
           {users.map((userData, i) => (
             <UsersListItem

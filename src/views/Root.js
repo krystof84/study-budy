@@ -6,14 +6,15 @@ import { theme } from 'assets/styles/theme';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import { users as usersData } from 'data/users';
+import Navigation from 'components/organisms/Navigation/Navigation.js';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.lightGrey};
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
+  padding-top: 50px;
 `;
 
 const initialFormState = {
@@ -56,10 +57,7 @@ const Root = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Wrapper>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/add-user">Add user</Link>
-          </nav>
+          <Navigation />
           <Switch>
             <Route path="/add-user">
               <Form

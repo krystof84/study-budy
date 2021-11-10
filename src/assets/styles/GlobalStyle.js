@@ -15,7 +15,11 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Monserrat', sans-serif;
   }
   
-  a, button {
+  a, button, li {
     font-family: 'Monserrat', sans-serif;    
+  }
+  
+  .nav-link-item {
+    text-decoration: none;
   }
 `;

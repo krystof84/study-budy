@@ -1,7 +1,8 @@
 import React from 'react';
-import { Wrapper, StyledTitle } from '../UsersList/UserList.styles';
+import { StyledTitle } from '../UsersList/UserList.styles';
 import FormField from 'components/molecules/FormField/FormField';
 import { Button } from 'components/atoms/Button/Button';
+import { ViewTemplate as Wrapper } from 'components/templates/ViewTemplate/ViewTemplate.styles';
 
 const Form = ({ handleAddUser, formValues, handleInputChange }) => {
   return (
