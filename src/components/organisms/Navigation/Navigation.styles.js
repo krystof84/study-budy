@@ -1,28 +1,37 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const NavWrapper = styled.nav`
-  padding: 47px 22px;
+export const Wrapper = styled.nav`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid ${({ theme }) => theme.colors.darkPurple};
+  justify-content: flex-start;
+  padding: 30px 0;
 `;
 
-export const NavListItem = styled.li``;
+export const Logo = styled.div`
+  background-color: ${({ theme }) => theme.colors.darkGrey};
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
 
-export const NavItemLogo = styled.div`
-  padding: 12px 15px;
-  background-color: ${(props) => props.theme.colors.darkGrey};
-  color: #fff;
-  text-align: right;
-  font-size: ${(props) => props.theme.fontSize.l};
-  font-weight: 700;
-`;
-
-export const NavList = styled.ul`
-  list-style: none;
-  text-align: right;
-  ${NavListItem} {
-    font-size: ${({ theme }) => theme.fontSize.m};
-    color: ${({ theme }) => theme.colors.darkGrey};
-    padding-bottom: 14px;
-    font-weight: 700;
-    text-decoration: none;
+  h1 {
+    font-size: 15px;
+    color: ${({ theme }) => theme.colors.white};
+    text-align: right;
+    margin-right: 20px;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  font-weight: bold;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.darkGrey};
+  text-align: right;
+  margin: 15px 20px 15px auto;
 `;

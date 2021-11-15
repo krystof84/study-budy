@@ -1,33 +1,20 @@
 import React from 'react';
-import {
-  NavWrapper,
-  NavList,
-  NavListItem,
-  NavItemLogo,
-} from './Navigation.styles';
-import { Link } from 'react-router-dom';
+import { Logo, StyledLink, Wrapper } from './Navigation.styles';
 
 const Navigation = () => {
   return (
-    <NavWrapper>
-      <NavItemLogo>
-        Study
-        <br />
-        Budy
-      </NavItemLogo>
-      <NavList>
-        <NavListItem>
-          <Link className="nav-link-item" to="/">
-            Home
-          </Link>
-        </NavListItem>
-        <NavListItem>
-          <Link className="nav-link-item" to="/add-user">
-            Add user
-          </Link>
-        </NavListItem>
-      </NavList>
-    </NavWrapper>
+    <Wrapper>
+      <Logo>
+        <h1>
+          Study <br />
+          Buddy
+        </h1>
+      </Logo>
+      <StyledLink to="/">Dashboard</StyledLink>
+      <StyledLink to="/add-user">Add user</StyledLink>
+      <StyledLink to="/">Settings</StyledLink>
+      <StyledLink to="/">Logout</StyledLink>
+    </Wrapper>
   );
 };
 
