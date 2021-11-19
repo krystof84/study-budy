@@ -1,5 +1,4 @@
 {
   "singleQuote": true,
   "endOfLine": "auto",
-  "react/jsx-max-props-per-line": [1, { "maximum": 8, "when": "always" }]
 }
