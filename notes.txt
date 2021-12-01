@@ -1,1 +1,6 @@
 npx eslint src/components/UsersList/UsersList.js --fix
+
+----------------------
+init Mock Service Worker
+
+npx msw init ./public --save
