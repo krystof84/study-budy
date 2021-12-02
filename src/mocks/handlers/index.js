@@ -26,4 +26,18 @@ export const handlers = [
       })
     );
   }),
+  rest.get('/student/:name', (req, res, ctx) => {
+    if (req.params.name) {
+      const matchingStudents = students.filter((student) => {
+        return student.name.includes(req.params.name);
+      });
+
+      return res(
+        ctx.status(200),
+        ctx.json({
+          matchingStudents,
+        })
+      );
+    }
+  }),
 ];

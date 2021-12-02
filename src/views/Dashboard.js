@@ -3,11 +3,13 @@ import axios from 'axios';
 import { ViewWrapper } from 'components/molecules/ViewWrapper/ViewWrapper';
 import { Link, useParams } from 'react-router-dom';
 import UsersList from 'components/organisms/UsersList/UsersList';
+import { Title } from 'components/atoms/Title/Title';
 
 const Dashboard = () => {
   const { id } = useParams();
   const [students, setStudents] = useState([]);
   const [groups, setGroups] = useState([]);
+  const [currentGroup, setCurrentGroup] = useState([]);
 
   useEffect(() => {
     axios
@@ -21,10 +23,12 @@ const Dashboard = () => {
       .get(`/students/${id || groups[0]}`)
       .then(({ data }) => setStudents(data.students))
       .catch((err) => console.log(err));
+    setCurrentGroup(id || groups[0]);
   }, [id, groups]);
 
   return (
     <ViewWrapper>
+      <Title>Group {currentGroup}</Title>
       <nav>
         {groups.map((group) => (
           <Link key={group} to={`/group/${group}`}>

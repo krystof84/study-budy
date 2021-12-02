@@ -25,3 +25,25 @@ export const StatusInfo = styled.div`
     margin: 5px;
   }
 `;
+
+export const InputSearchWrapper = styled.div`
+  position: relative;
+`;
+
+export const SearchResult = styled.div`
+  background-color: #fff;
+  margin: 10px 0;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  overflow-y: scroll;
+  span {
+    display: block;
+    color: ${({ theme }) => theme.colors.darkGrey};
+    margin: 15px 10px;
+  }
+`;
