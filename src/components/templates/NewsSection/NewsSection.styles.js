@@ -24,6 +24,7 @@ export const ArticleWrapper = styled(ViewWrapper)`
   max-width: unset;
   border-radius: 12px;
   color: ${({ theme }) => theme.colors.darkGrey};
+
   p {
     line-height: 1.6;
   }
@@ -34,13 +35,16 @@ export const TitleWrapper = styled.div`
     margin: 0;
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
+
   p {
-    font-size: ${({ theme }) => theme.fontSize.m};
+    margin: 0;
+    font-size: ${({ theme }) => theme.fontSize.l};
   }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
+
   img {
     margin-left: 35px;
     max-width: 200px;

@@ -1,18 +1,16 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  width: 22.5px;
-  height: 22.5px;
-  background-color: #c0c7d6;
+  width: 22px;
+  height: 22px;
+  margin: 0 10px;
+  background-color: ${({ theme }) => theme.colors.grey};
   border-radius: 50px;
   border: none;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
-  cursor: pointer;
-  align-self: flex-start;
 
   svg {
     width: 100%;

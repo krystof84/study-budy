@@ -53,8 +53,8 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
     width: 18px;
     height: 3px;
     top: 50%;
-    right: -20px;
     transform: translateY(-50%);
+    right: -20px;
     background-color: ${({ theme }) => theme.colors.darkPurple};
   }
 `;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   margin: 15px 0;
-  padding: ${({ isBig }) => (isBig ? '10px 38px' : '4px 20px')};
+  padding: ${({ isBig }) => (isBig ? '10px 38px' : '7px 20px')};
   font-size: ${({ isBig, theme: { fontSize } }) =>
     isBig ? fontSize.m : fontSize.s};
   background-color: ${({ theme }) => theme.colors.lightPurple};
@@ -10,5 +10,4 @@ export const Button = styled.button`
   border: none;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkGrey};
-  cursor: pointer;
 `;

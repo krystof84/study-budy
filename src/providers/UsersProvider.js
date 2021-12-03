@@ -30,7 +30,6 @@ const UsersProvider = ({ children }) => {
     };
     setUsers([newUser, ...users]);
   };
-
   return (
     <UsersContext.Provider
       value={{
